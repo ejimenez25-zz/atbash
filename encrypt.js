@@ -17,21 +17,23 @@ let atBashCipher =
 function atBash(textEncrypt){
     console.log('yay');
     //Create an empty variable that will store the iteration
-    let textEncrypt = document.getElementById('encrypt').value;
+    textEncrypt = document.getElementById('encrypt').value;
+    const atBashValues = Object.values(atBashCipher);
+    console.log(atBashValues);
     let cipher = '';
     //for in loops though an object's properties names.
-    for (let letter in textEncrypt){
+    for (const letter in atBashValues){
       //Conditional statement that adds a letter to 'cipher' if it isn't a space
       //from the cipher object
-      console.log('ok, not bad');
-      if(letter != ''){
-        cipher += atBashCipher.letter;
-        console.log(letter);
+//      if(letter != ''){
+//        cipher += atBashCipher[letter];
         //Conditional statement that adds a space if here is a space
-      } else {
-        cipher += '';
-        }
+//      } else {
+//        cipher += '';
+//        }
       //Display the result after the iteration
-      return cipher;
+//      return cipher;
+//    }
+      console.log(letter);
     }
   }
